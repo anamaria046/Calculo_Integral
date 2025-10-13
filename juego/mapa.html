@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa - Señal de Boyacá</title>
+</head>
+<body>
+    <h1>Mapa del Juego</h1>
+    <p>
+        Bienvenido a la Universidad de Boyacá. Selecciona el primer edificio para poder iniciar el juego.
+        A medida que avances y completes los niveles, se desbloquearán nuevos edificios. ¡Buena suerte!
+    </p>
+
+        <section class="mapa-edificios">
+            <button class="edificio" id="edificio1" data-nivel="1">
+                Edificio 1
+            </button>
+
+            <button class="edificio bloqueado" id="edificio2" data-nivel="2" disabled>
+                Edificio 2
+            </button>
+
+            <button class="edificio bloqueado" id="edificio3" data-nivel="3" disabled>
+                Edificio 3
+            </button>
+
+            <button class="edificio bloqueado" id="edificio4" data-nivel="4" disabled>
+                Edificio 4
+            </button>
+
+            <button class="edificio bloqueado" id="edificio5" data-nivel="5" disabled>
+                Edificio 5
+            </button>
+        </section>
+
+    <script src="js/controller/mapaController.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
