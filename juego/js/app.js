@@ -1,22 +1,63 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const pagina = window.location.pathname.split("/").pop();
+  const urlActual = window.location.pathname;
+  const nombrePagina = urlActual.split("/").pop();
 
-    switch (pagina) {
-        case "index.html":
-        case "":
-            if (typeof inicioController !== "undefined") {
-                inicioController.init();
-            }
-            break;
+  if (!localStorage.getItem("nivelDesbloqueado")) {
+    localStorage.setItem("nivelDesbloqueado", 1);
+  }
 
-        case "intro.html":
-            if (typeof introController !== "undefined") {
-                introController.init();
-            }
-            break;
+  if (nombrePagina === "index.html" || nombrePagina === "") {
+    const btnJugar = document.querySelector(".btn-play button");
 
-        default:
-            console.warn("No se encontró un controlador para esta página:", pagina);
-            break;
+    if (btnJugar) {
+      btnJugar.addEventListener("click", () => {
+        window.location.href = "intro.html";
+      });
     }
+  }
+
+  else if (nombrePagina === "intro.html") {
+    const video = document.querySelector("video");
+
+    if (video) {
+      video.setAttribute("autoplay", true);
+      video.setAttribute("controls", false);
+
+      video.addEventListener("ended", () => {
+        window.location.href = "mapa.html";
+      });
+    }
+
+    const btnSaltar = document.querySelector("#btnSaltar");
+    if (btnSaltar) {
+      btnSaltar.addEventListener("click", () => {
+        window.location.href = "mapa.html";
+      });
+    }
+  }
+
+  else if (nombrePagina === "mapa.html") {
+    const edificios = document.querySelectorAll(".edificio");
+    const nivelDesbloqueado = parseInt(localStorage.getItem("nivelDesbloqueado")) || 1;
+
+    edificios.forEach((edificio, index) => {
+      const nivel = index + 1;
+
+      if (nivel <= nivelDesbloqueado) {
+        edificio.classList.add("desbloqueado");
+        edificio.addEventListener("click", () => {
+          localStorage.setItem("nivelActual", nivel);
+          window.location.href = "nivel.html";
+        });
+      } else {
+        edificio.classList.add("bloqueado");
+        edificio.addEventListener("click", () => {
+          alert("Este edificio aún está bloqueado. Completa los anteriores primero.");
+        });
+      }
+    });
+  }
+
+  else if (nombrePagina === "nivel.html") {
+  }
 });

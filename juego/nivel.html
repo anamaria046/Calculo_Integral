@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nivel - Señal de Boyacá</title>
+  <link rel="stylesheet" href="css/nivel.css" />
 </head>
 <body>
-    
+  <main id="contenedor-nivel">
+    <section id="profesor">
+      <img id="img-profesor" src="" alt="Profesor" />
+      <h2 id="nombre-profesor"></h2>
+    </section>
+
+    <section id="dialogo" class="bloque">
+      <p id="texto-dialogo"></p>
+      <button id="btn-continuar">Continuar</button>
+    </section>
+
+    <section id="pregunta" class="bloque oculto">
+      <p id="texto-pregunta"></p>
+      <input type="text" id="respuesta" placeholder="Escribe tu respuesta aquí" />
+      <button id="btn-responder">Responder</button>
+    </section>
+
+    <section id="mensaje-final" class="bloque oculto">
+      <p id="texto-mensaje"></p>
+      <button id="btn-volver-mapa" class="oculto">Volver al mapa</button>
+    </section>
+  </main>
+
+  <script src="js/model/nivelModel.js"></script>
+  <script src="js/controller/nivelController.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
