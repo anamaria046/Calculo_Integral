@@ -50,11 +50,22 @@ p {
   transition: 0.25s;
 }
 
-.edificio:hover img {
+.edificio.desbloqueado:hover img {
   filter: drop-shadow(0 0 4px #DAF527)
           drop-shadow(0 0 8px #DAF527)
           drop-shadow(0 0 12px #DAF527);
   transform: scale(1.05);
+}
+
+.edificio.bloqueado img {
+  opacity: 0.5;
+  filter: grayscale(100%) brightness(0.7);
+  cursor: not-allowed;
+}
+
+.edificio.desbloqueado img {
+  opacity: 1;
+  filter: none;
 }
 
 .e12 {
