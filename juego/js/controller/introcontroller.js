@@ -1,20 +1,16 @@
-const introController = {
-  init() {
-    const video = document.getElementById("videoIntro");
-    const btnSaltar = document.getElementById("btnSaltar");
+ const video = document.getElementById('videoIntro');
+        const btnSaltar = document.getElementById('btnSaltar');
 
-    if (video) {
-      video.addEventListener("ended", () => this.irAMapa());
-    }
+        // Inicia el video cuando el usuario hace clic en cualquier parte o en el botón
+        const iniciarVideo = () => {
+            video.play()
+                .then(() => console.log('Video reproducido con sonido'))
+                .catch(err => console.warn('El navegador bloqueó el autoplay con sonido:', err));
+            document.removeEventListener('click', iniciarVideo);
+        };
 
-    if (btnSaltar) {
-      btnSaltar.addEventListener("click", () => this.irAMapa());
-    }
-  },
-
-  irAMapa() {
-    window.location.href = "mapa.html";
-  }
-};
-
-export default introController;
+        document.addEventListener('click', iniciarVideo);
+        btnSaltar.addEventListener('click', () => {
+            // Aquí podrías redirigir o pasar a la siguiente página
+            console.log('Intro saltada');
+        });
