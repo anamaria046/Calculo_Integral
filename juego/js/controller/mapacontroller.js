@@ -23,5 +23,12 @@ const mapaController = {
     window.location.href = "nivel.html";
   }
 };
+window.addEventListener('load', () => {
+  const audio = document.getElementById('audiomapa');
+  audio.play().catch(err => {
+    console.warn('El navegador bloqueó la reproducción automática:', err);
+  });
+});
+
 
 export default mapaController;
