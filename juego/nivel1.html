@@ -4,35 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nivel - Señal de Boyacá</title>
-  <link rel="stylesheet" href="css/nivel.css" />
+  <link rel="stylesheet" href="css/nivel1.css" />
 </head>
-<body>
-  <video id="fondo1"src="assets/video/fondo1.mp4"></video>
-  <main id="contenedor-nivel">
-    <section id="profesor">
-      <img id="img-profesor" src="" alt="Profesor" />
-      <h2 id="nombre-profesor"></h2>
-    </section>
-
-    <section id="dialogo" class="bloque">
-      <p id="texto-dialogo"></p>
-      <button id="btn-continuar">Continuar</button>
-    </section>
-
-    <section id="pregunta" class="bloque oculto">
-      <p id="texto-pregunta"></p>
-      <input type="text" id="respuesta" placeholder="Escribe tu respuesta aquí" />
-      <button id="btn-responder">Responder</button>
-    </section>
-
-    <section id="mensaje-final" class="bloque oculto">
-      <p id="texto-mensaje"></p>
-      <button id="btn-volver-mapa" class="oculto">Volver al mapa</button>
-    </section>
-  </main>
-
-  <script src="js/model/nivelModel.js"></script>
-  <script src="js/controller/nivelController.js"></script>
-  <script src="js/app.js"></script>
+<body data-pagina="nivel1">
+  <!--fondo-->
+  <video autoplay loop muted playsinline id="video-fondo">
+    <source src="assets/video/fondo1.mp4" type="video/mp4"/>
+  </video>
+  <!--Profesor-->
+  <div class="profesor">
+    <img src="assets/img/valderrama.png" alt="profesor">
+  </div>
+  <!--dialogo inicial-->
+  <div class="caja-dialogo" id="dialogo">
+    <div class="nombre-personaje" id="nombrePersonaje">Profesor</div>
+    <p id="textoDialogo"></p>
+    <button id="btnSiguiente">Siguiente</button>
+  </div>
+  <!--adivinanza-->
+  <div class="dialogo-box" id="adivinanza" style="display:none;">
+    <div class="nombre-personaje"></div>
+    <p id="textoAdivinanza"></p>
+    <input type="text" id="respuestaJugador" placeholder="Escribe tu respuesta..." />
+    <button id="btnResponder">Responder</button>
+    <p id="mensajeResultado"></p>
+  </div>
+  <!--dialogo final-->
+  <div class="dialogo-box" id="dialogoFinal" style="display:none;">
+    <div class="nombre-personaje"></div>
+    <p>
+      ¡Felicitaciones! Has superado este desafío.Continúa hacia el siguiente nivel, el conocimiento te espera.
+    </p>
+    <button id="btnSiguienteNivel">Ir al siguiente nivel</button>
+  </div>
+  <script type="module" src="js/controller/nivel1controller.js"></script>
 </body>
 </html>
