@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+* {
+  cursor: url("../assets/img/cursor2.png"), auto;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Silkscreen', sans-serif;
+  color: white;
+}
+
+#video-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+  background-color: black; 
+}
+
+.profesor {
+  position: absolute;
+  bottom: 150px;        
+  left: 50%;           
+  transform: translateX(-50%);  
+  z-index: 5;
+  animation: movimiento 2.5s ease-in-out infinite;
+}
+
+@keyframes movimiento {
+    0%, 100% {
+        transform: translateX(-50%) translateX(0);
+    } 50% {
+        transform: translateX(-50%) translateY(-8px);
+    }
+}
+
+.profesor img {
+  height: 420px;
+  image-rendering: pixelated;
+}
+
+.caja-dialogo {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 950px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 3px solid #E32400;
+  border-radius: 20px;
+  padding: 20px;
+  z-index: 10;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  animation: aparecer 0.5s ease-in-out;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translate(-50%, 20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.nombre-personaje {
+  font-weight: bold;
+  color: #E32400;
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-shadow: 1px 1px 4px black;
+}
+
+.caja-dialogo p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.caja-dialogo button {
+  background: #E32400;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-family: 'Silkscreen', sans-serif;
+  transition: 0.2s;
+  color: white;
+}
+
+.caja-dialogo button:hover {
+  background: #fff;
+  color: #E32400;
+
+}
+
+#adivinanza input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #f1d002;
+  margin-bottom: 10px;
+}

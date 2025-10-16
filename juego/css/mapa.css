@@ -16,7 +16,7 @@ body{
   background-position: top center;
   background-attachment: scroll;
   background-size: 100% auto; 
-  min-height: calc(100vw * 3.3333);
+  min-height: 328.33vw;
 }
 
 p {
