@@ -1,5 +1,7 @@
+import { Progreso } from "../model/progreso.js";
+
 const mapaController = {
-  init(Progreso) {
+  init() {
     const edificios = document.querySelectorAll(".edificio");
     const nivelDesbloqueado = Progreso.obtenerNivelDesbloqueado();
 
@@ -20,15 +22,8 @@ const mapaController = {
 
   irANivel(nivel) {
     localStorage.setItem("nivelActual", nivel);
-    window.location.href = "nivel.html";
+    window.location.href = "nivel1.html"; // 
   }
 };
-window.addEventListener('load', () => {
-  const audio = document.getElementById('audiomapa');
-  audio.play().catch(err => {
-    console.warn('El navegador bloqueó la reproducción automática:', err);
-  });
-});
-
 
 export default mapaController;

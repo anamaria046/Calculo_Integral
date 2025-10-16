@@ -5,19 +5,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   switch (pagina) {
     case "inicio": {
-      const module = await import("../controller/inicioController.js");
+      const module = await import("./controller/inicioController.js");
       module.default.init();
       break;
     }
 
     case "intro": {
-      const module = await import("../controller/introController.js");
+      const module = await import("./controller/introController.js");
       module.default.init();
       break;
     }
 
     case "mapa": {
-      const module = await import("../controller/mapaController.js");
+      const module = await import("./controller/mapaController.js");
       module.default.init(Progreso);
       break;
     }

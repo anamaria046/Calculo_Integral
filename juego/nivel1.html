@@ -3,40 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nivel - Señal de Boyacá</title>
+  <title>Nivel 1 - Señal de Boyacá</title>
   <link rel="stylesheet" href="css/nivel1.css" />
 </head>
 <body data-pagina="nivel1">
-  <!--fondo-->
+  <!-- Fondo -->
   <video autoplay loop muted playsinline id="video-fondo">
-    <source src="assets/video/fondo1.mp4" type="video/mp4"/>
+    <source src="assets/video/fondo1.mp4" type="video/mp4" />
   </video>
-  <!--Profesor-->
+
+  <!-- Profesor -->
   <div class="profesor">
-    <img src="assets/img/valderrama.png" alt="profesor">
+    <img src="assets/img/valderrama.png" alt="profesor" />
   </div>
-  <!--dialogo inicial-->
-  <div class="caja-dialogo" id="dialogo">
-    <div class="nombre-personaje" id="nombrePersonaje">Profesor</div>
+
+  <!-- Diálogo inicial -->
+  <div class="caja-dialogo" id="dialogoInicial">
+    <div class="nombre-personaje" id="nombrePersonaje">Profesor Valderrama</div>
     <p id="textoDialogo"></p>
     <button id="btnSiguiente">Siguiente</button>
   </div>
-  <!--adivinanza-->
-  <div class="dialogo-box" id="adivinanza" style="display:none;">
-    <div class="nombre-personaje"></div>
+
+  <!-- Adivinanza -->
+  <div class="dialogo-box" id="adivinanzaBox" style="display:none;">
+    <div class="nombre-personaje">Profesor Valderrama</div>
     <p id="textoAdivinanza"></p>
     <input type="text" id="respuestaJugador" placeholder="Escribe tu respuesta..." />
     <button id="btnResponder">Responder</button>
     <p id="mensajeResultado"></p>
   </div>
-  <!--dialogo final-->
+
+  <!-- Diálogo final -->
   <div class="dialogo-box" id="dialogoFinal" style="display:none;">
-    <div class="nombre-personaje"></div>
+    <div class="nombre-personaje">Profesor Valderrama</div>
     <p>
-      ¡Felicitaciones! Has superado este desafío.Continúa hacia el siguiente nivel, el conocimiento te espera.
+      ¡Felicitaciones! Has superado este desafío. Continúa hacia el siguiente nivel,
+      el conocimiento te espera.
     </p>
     <button id="btnSiguienteNivel">Ir al siguiente nivel</button>
   </div>
-  <script type="module" src="js/controller/nivel1controller.js"></script>
+
+  <!-- Script principal del nivel -->
+  <script type="module">
+    import nivel1Controller from "./js/controller/nivel1controller.js";
+    nivel1Controller.init();
+  </script>
+
 </body>
 </html>

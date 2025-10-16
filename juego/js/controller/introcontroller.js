@@ -1,16 +1,25 @@
- const video = document.getElementById('videoIntro');
-        const btnSaltar = document.getElementById('btnSaltar');
+const video = document.getElementById("videoIntro");
+const btnSaltar = document.getElementById("btnSaltar");
 
-        // Inicia el video cuando el usuario hace clic en cualquier parte o en el botón
-        const iniciarVideo = () => {
-            video.play()
-                .then(() => console.log('Video reproducido con sonido'))
-                .catch(err => console.warn('El navegador bloqueó el autoplay con sonido:', err));
-            document.removeEventListener('click', iniciarVideo);
-        };
+// Espera la interaccion del usuario para reproducir con sonido
+const iniciarVideo = () => {
+  video.play()
+    .then(() => {
+      console.log("Video reproducido con sonido 🎵");
+    })
+    .catch(err => {
+      console.warn("El navegador bloqueó la reproducción automática:", err);
+    });
 
-        document.addEventListener('click', iniciarVideo);
-        btnSaltar.addEventListener('click', () => {
-            // Aquí podrías redirigir o pasar a la siguiente página
-            console.log('Intro saltada');
-        });
+  // Quita el listener después del primer clic
+  document.removeEventListener("click", iniciarVideo);
+};
+
+// Inicia el video al hacer clic en cualquier parte
+document.addEventListener("click", iniciarVideo);
+
+// Boton Saltar
+btnSaltar.addEventListener("click", () => {
+  video.pause();
+  window.location.href = "mapa.html";
+});
