@@ -1,19 +1,19 @@
 import { Progreso } from "../model/progreso.js";
-import { preguntasNivel2 } from "../model/preguntasnivel2.js";
+import { preguntasNivel3 } from "../model/preguntasnivel3.js";
 
-const nivel2Controller = {
+const nivel3Controller = {
   dialogos: [
-    { personaje: "Profesor Ochoa", texto: "Saludos, viajero digital." },
-    { personaje: "Profesor Ochoa", texto: "Soy Mauricio Ochoa Echeverría, Director de Ingeniería de Sistemas e Ingeniería en Multimedia." },
-    { personaje: "Profesor Ochoa", texto: "En estas carreras vivimos a la vanguardia de la tecnología. Nos apasionan las nuevas herramientas digitales: trabajamos con animación 2D, 3D, realidad virtual y aumentada para crear contenidos multimedia innovadores en el mundo de la comunicación digital . También dominamos la lógica de la programación, el lenguaje secreto de las máquinas. Desde código binario hasta inteligencia artificial, combinamos creatividad y técnica para darle vida al mundo virtual.." },
-    { personaje: "Profesor Ochoa", texto: "Todo nace de un lenguaje muy antiguo... y muy actual." }
+    { personaje: "Profesor Avendaño", texto: "Saludos, aventurero digital." },
+    { personaje: "Profesor Avendaño", texto: "Soy Julián Andrés Avendaño, Director de Ingeniería Mecatrónica." },
+    { personaje: "Profesor Avendaño", texto: "En esta carrera vivimos entre engranajes, sensores y código; unimos la mecánica, la electrónica y la programación para crear soluciones inteligentes. Diseñamos máquinas que piensan y actúan, innovando con software y herramientas digitales."},
+    { personaje: "Profesor Avendaño", texto: "En la Ingeniería Mecatrónica, conectamos ideas con tecnología y transformamos la creatividad en movimiento." }
   ],
 
   indiceDialogo: 0,
   preguntaActual: null,
 
   init() {
-    console.log("Controlador de Nivel 2 iniciado");
+    console.log("Controlador de Nivel 3 iniciado");
 
     // 🔹 Coinciden con el HTML actual
     this.cajaDialogo = document.getElementById("dialogoInicial");
@@ -60,7 +60,7 @@ const nivel2Controller = {
   mostrarAdivinanza() {
     console.log("Mostrando adivinanza");
     this.cajaAdivinanza.style.display = "block";
-    this.preguntaActual = preguntasNivel2[Math.floor(Math.random() * preguntasNivel2.length)];
+    this.preguntaActual = preguntasNivel3[Math.floor(Math.random() * preguntasNivel3.length)];
     this.textoAdivinanza.textContent = this.preguntaActual.pregunta;
     this.respuestaJugador.value = "";
     this.mensajeResultado.textContent = "";
@@ -73,7 +73,7 @@ const nivel2Controller = {
     if (respuestaJugador === respuestaCorrecta) {
       this.mensajeResultado.textContent = this.preguntaActual.dialogoCorrecto;
       this.mensajeResultado.style.color = "lightgreen";
-      Progreso.establecerNivelDesbloqueado(3);
+      Progreso.establecerNivelDesbloqueado(4);
       setTimeout(() => {
         this.cajaAdivinanza.style.display = "none";
         this.mostrarDialogoFinal();
@@ -95,4 +95,4 @@ const nivel2Controller = {
   }
 };
 
-export default nivel2Controller;
+export default nivel3Controller;
