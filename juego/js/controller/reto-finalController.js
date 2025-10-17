@@ -91,7 +91,7 @@ const retofinalController = {
   },
 
   irASiguienteNivel() {
-    window.location.href = "mapa.html";
+    window.location.href = "victoria.html";
   }
 };
 

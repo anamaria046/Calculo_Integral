@@ -22,8 +22,13 @@ const mapaController = {
 
   irANivel(nivel) {
     localStorage.setItem("nivelActual", nivel);
-    window.location.href = "nivel1.html"; // 
-  }
+    if (nivel<=4) {
+    window.location.href = `nivel${nivel}.html`;}
+    else {
+      window.location.href = "reto-final.html";
+    }
+}
+
 };
 
 export default mapaController;
