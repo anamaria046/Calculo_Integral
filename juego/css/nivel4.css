@@ -3,15 +3,12 @@
 * {
   cursor: url("../assets/img/cursor2.png"), auto;
 }
-
 body {
   margin: 0;
   overflow: hidden;
   font-family: 'Silkscreen', sans-serif;
   color: white;
 }
-
-/* 🎥 Fondo del nivel */
 #video-fondo {
   position: fixed;
   top: 0;
@@ -23,8 +20,6 @@ body {
   z-index: -1;
   background-color: black;
 }
-
-/* 👨 Profesor */
 .profesor {
   position: absolute;
   bottom: 150px;
@@ -33,7 +28,6 @@ body {
   z-index: 5;
   animation: movimiento 2.5s ease-in-out infinite;
 }
-
 @keyframes movimiento {
   0%, 100% {
     transform: translateX(-50%) translateY(0);
@@ -42,13 +36,10 @@ body {
     transform: translateX(-50%) translateY(-8px);
   }
 }
-
 .profesor img {
   height: 390px;
   image-rendering: pixelated;
 }
-
-/* 💬 Cuadro de diálogo general (sirve para todos) */
 .caja-dialogo,
 .dialogo-box {
   position: fixed;
@@ -66,14 +57,10 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   animation: aparecer 0.5s ease-in-out;
 }
-
-/* ✨ Animación de aparición */
 @keyframes aparecer {
   from { opacity: 0; transform: translate(-50%, 20px); }
   to { opacity: 1; transform: translate(-50%, 0); }
 }
-
-/* 🧠 Nombre del personaje */
 .nombre-personaje {
   font-weight: bold;
   color: #E32400;
@@ -81,15 +68,11 @@ body {
   font-size: 20px;
   text-shadow: 1px 1px 4px black;
 }
-
-/* 📝 Texto del diálogo */
 .caja-dialogo p,
 .dialogo-box p {
   font-size: 18px;
   margin-bottom: 10px;
 }
-
-/* 🔘 Botones (Siguiente, Responder, etc.) */
 .caja-dialogo button,
 .dialogo-box button {
   background: #E32400;
@@ -101,15 +84,13 @@ body {
   color: white;
   cursor: pointer;
 }
-
 .caja-dialogo button:hover,
 .dialogo-box button:hover {
   background: #fff;
   color: #E32400;
 }
-
-/* ✍️ Campo de texto de adivinanza */
 #adivinanzaBox input {
+  box-sizing: border-box;
   width: 100%;
   padding: 10px;
   font-size: 16px;

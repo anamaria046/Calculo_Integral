@@ -8,6 +8,6 @@ export const Progreso = {
   },
 
   reiniciar() {
-    localStorage.clear();
-  }
+    localStorage.removeItem("nivelDesbloqueado");
+  },
 };

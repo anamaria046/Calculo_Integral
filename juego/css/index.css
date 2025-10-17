@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 body{
-    background-image: url(../assets/img/fondo2.png);
+    background-image: url("../assets/img/fondo2.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(0,0,0,0.3);
@@ -12,13 +12,11 @@ body{
     min-height: 100vh;
     text-align: center; 
 }
-
 h1 {
     color: #ffffff;
      font-family: "Silkscreen", sans-serif;
      font-size: 95px;
 }
-
 h2{
     font-family: "Silkscreen", sans-serif;
     font-size: 25px;
@@ -29,13 +27,11 @@ h2{
     background-color: rgba(224, 215, 204, 0.815);
     margin-bottom: 15px;  
 }
-
 .btn-play {
     margin-bottom: 25px;
     display: flex;
     gap: 15px;
 }
-
 .btn-play button {
     background: #ee1a1aec;
     color: #ffffff;
@@ -45,26 +41,12 @@ h2{
     font-family: "Silkscreen", sans-serif;
     cursor: pointer;
 }
-
 .btn-play button:hover {
     background-color: #e0dadac9;  
     color: rgb(248, 2, 2);
 }
-
 .btn-play button:active {
     background-color: rgb(255, 255, 255);
     transform:scale(0.90);
     color: rgb(248, 17, 17);
-}
-
-#btnSaltar {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  background: #4e7cff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
 }

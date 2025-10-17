@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Victoria!</title>
+  <link rel="stylesheet" href="css/victoria.css">
 </head>
 <body>
-      <audio id="audio" src="assets/sounds/victoria.m4a" autoplay></audio>
+  <audio id="audio" src="assets/sounds/victoria.m4a" autoplay></audio>
+
+  <div class="contenedor-victoria">
+    <h1>¡Felicidades, Campeón!</h1>
+    <div class="escena">
+      <img src="assets/img/personajefinal.png" alt="Personaje feliz" class="personaje">
+      <img src="assets/img/trofeo.png" alt="Trofeo" class="trofeo">
+    </div>
+    <button id="btnReiniciar">Volver al inicio</button>
+  </div>
+
+  <script type="module" src="js/controller/victoriacontroller.js"></script>
 </body>
 </html>
+

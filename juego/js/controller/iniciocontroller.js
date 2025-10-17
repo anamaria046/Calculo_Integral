@@ -1,3 +1,5 @@
+import { Progreso } from "../model/progreso.js";
+
 const inicioController = {
   init() {
     const btnJugar = document.getElementById("btnJugar");
@@ -13,9 +15,9 @@ const inicioController = {
   },
 
   irAIntro() {
-    // Si no hay progreso inicia desde el nivel 1
-    if (!localStorage.getItem("nivelDesbloqueado")) {
-      localStorage.setItem("nivelDesbloqueado", 1);
+    const nivel = Progreso.obtenerNivelDesbloqueado();
+    if (!nivel || nivel < 1) {
+      Progreso.establecerNivelDesbloqueado(1);
     }
     window.location.href = "intro.html";
   },
@@ -23,10 +25,11 @@ const inicioController = {
   reiniciarProgreso() {
     const confirmar = confirm("¿Seguro que deseas reiniciar todo tu progreso?");
     if (confirmar) {
-      localStorage.clear();
+      Progreso.reiniciar();
       alert("Progreso reiniciado. Puedes comenzar de nuevo.");
+      window.location.reload();
     }
-  }
+  },
 };
 
 export default inicioController;

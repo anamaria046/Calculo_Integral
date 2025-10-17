@@ -15,7 +15,6 @@ const nivel1Controller = {
   init() {
     console.log("Controlador de Nivel 1 iniciado");
 
-    // 🔹 Coinciden con el HTML actual
     this.cajaDialogo = document.getElementById("dialogoInicial");
     this.nombrePersonaje = document.getElementById("nombrePersonaje");
     this.textoDialogo = document.getElementById("textoDialogo");
@@ -30,18 +29,15 @@ const nivel1Controller = {
     this.dialogoFinal = document.getElementById("dialogoFinal");
     this.btnSiguienteNivel = document.getElementById("btnSiguienteNivel");
 
-    // Verifica que la caja principal exista
     if (!this.cajaDialogo) {
       console.error("No se encontró el div con id='dialogoInicial'");
       return;
     }
 
-    // Eventos
     this.btnSiguiente.addEventListener("click", () => this.mostrarSiguienteDialogo());
     this.btnResponder.addEventListener("click", () => this.verificarRespuesta());
     this.btnSiguienteNivel.addEventListener("click", () => this.irASiguienteNivel());
 
-    // Primer diálogo
     this.mostrarSiguienteDialogo();
   },
 
@@ -58,8 +54,9 @@ const nivel1Controller = {
   },
 
   mostrarAdivinanza() {
-    console.log("Mostrando adivinanza");
+    console.log("Mostrando adivinanza...");
     this.cajaAdivinanza.style.display = "block";
+
     this.preguntaActual = preguntasNivel1[Math.floor(Math.random() * preguntasNivel1.length)];
     this.textoAdivinanza.textContent = this.preguntaActual.pregunta;
     this.respuestaJugador.value = "";
@@ -70,10 +67,18 @@ const nivel1Controller = {
     const respuestaJugador = this.respuestaJugador.value.trim().toLowerCase();
     const respuestaCorrecta = this.preguntaActual.respuesta.toLowerCase();
 
+    if (!respuestaJugador) {
+      this.mensajeResultado.textContent = "Escribe una respuesta antes de enviar.";
+      this.mensajeResultado.style.color = "yellow";
+      return;
+    }
+
     if (respuestaJugador === respuestaCorrecta) {
       this.mensajeResultado.textContent = this.preguntaActual.dialogoCorrecto;
       this.mensajeResultado.style.color = "lightgreen";
+
       Progreso.establecerNivelDesbloqueado(2);
+
       setTimeout(() => {
         this.cajaAdivinanza.style.display = "none";
         this.mostrarDialogoFinal();
@@ -81,16 +86,20 @@ const nivel1Controller = {
     } else {
       this.mensajeResultado.textContent = this.preguntaActual.dialogoIncorrecto;
       this.mensajeResultado.style.color = "red";
-      this.respuestaJugador.value = "";
+
+      setTimeout(() => {
+        this.mostrarAdivinanza();
+      }, 2000);
     }
   },
 
   mostrarDialogoFinal() {
-    console.log("Mostrando diálogo final");
+    console.log("Mostrando diálogo final...");
     this.dialogoFinal.style.display = "block";
   },
 
   irASiguienteNivel() {
+    console.log("Volviendo al mapa...");
     window.location.href = "mapa.html";
   }
 };
