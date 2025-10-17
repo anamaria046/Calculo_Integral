@@ -55,7 +55,7 @@ export const preguntasNivel1 = [
   },
   { // Pregunta 10
     pregunta: "Aquí va la pregunta: ¿cómo se le llama a cuando queremos encontrar la mejor alternativa a un proceso?", 
-    respuesta: "optimización",
+    respuesta: "optimizacion",
     dialogoCorrecto:  "¡Correcto! La optimización es clave en ingeniería industrial. Siempre buscamos la mejor manera de hacer las cosas con los recursos disponibles.",
     dialogoIncorrecto: "Lo siento, esa no es la respuesta, amigo. Piensa en lo que se hace para maximizar beneficios y reducir al mínimo posible los costos. Vamos, ¡intenta de nuevo!"
   }
