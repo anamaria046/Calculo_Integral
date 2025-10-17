@@ -3,36 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nivel - Señal de Boyacá</title>
-  <link rel="stylesheet" href="css/nivel.css" />
+  <title>Reto Final - Señal de Boyacá</title>
+  <link rel="stylesheet" href="css/reto-final.css" />
 </head>
-<body>
-  <video id="fondo5"src="assets/video/fondo5.mp4"></video>
-  <main id="contenedor-nivel">
-    <section id="profesor">
-      <img id="img-profesor" src="" alt="Profesor" />
-      <h2 id="nombre-profesor"></h2>
-    </section>
+<body data-pagina="reto-final">
+  <!-- Fondo -->
+  <video autoplay loop muted playsinline id="video-fondo">
+    <source src="assets/video/fondo5.mp4" type="video/mp4" />
+  </video>
 
-    <section id="dialogo" class="bloque">
-      <p id="texto-dialogo"></p>
-      <button id="btn-continuar">Continuar</button>
-    </section>
+  <!-- Profesor -->
+  <div class="profesor">
+    <img src="assets/img/gabriel.png" alt="profesor" />
+  </div>
 
-    <section id="pregunta" class="bloque oculto">
-      <p id="texto-pregunta"></p>
-      <input type="text" id="respuesta" placeholder="Escribe tu respuesta aquí" />
-      <button id="btn-responder">Responder</button>
-    </section>
+  <!-- Diálogo inicial -->
+  <div class="caja-dialogo" id="dialogoInicial">
+    <div class="nombre-personaje" id="nombrePersonaje">Profesor Cifuentes</div>
+    <p id="textoDialogo"></p>
+    <button id="btnSiguiente">Siguiente</button>
+  </div>
 
-    <section id="mensaje-final" class="bloque oculto">
-      <p id="texto-mensaje"></p>
-      <button id="btn-volver-mapa" class="oculto">Volver al mapa</button>
-    </section>
-  </main>
+  <!-- Adivinanza -->
+  <div class="dialogo-box" id="adivinanzaBox" style="display:none;">
+    <div class="nombre-personaje">Profesor Cifuentes</div>
+    <p id="textoAdivinanza"></p>
+    <input type="text" id="respuestaJugador" placeholder="Escribe tu respuesta..." />
+    <button id="btnResponder">Responder</button>
+    <p id="mensajeResultado"></p>
+  </div>
 
-  <script src="js/model/nivelModel.js"></script>
-  <script src="js/controller/nivelController.js"></script>
-  <script src="js/app.js"></script>
+  <!-- Diálogo final -->
+  <div class="dialogo-box" id="dialogoFinal" style="display:none;">
+    <div class="nombre-personaje">Profesor Cifuentes</div>
+    <p>
+      ¡Felicitaciones! Has completado todos los retos que te hemos puesto en la facultad. Esperamos
+      que hayas disfrutado y aprendido en este viaje. Recuerda que el conocimiento es un camino sin fin.
+      Sigue explorando, cuestionando y creciendo. ¡El futuro está en tus manos!
+    </p>
+    <button id="btnSiguienteNivel">Ir al siguiente nivel</button>
+  </div>
+
+  <!-- Script principal del nivel -->
+  <script type="module">
+    import retofinalController from "./js/controller/reto-finalController.js";
+    retofinalController.init();
+  </script>
+
 </body>
 </html>

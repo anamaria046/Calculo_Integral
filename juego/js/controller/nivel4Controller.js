@@ -3,7 +3,7 @@ import { preguntasNivel4 } from "../model/preguntasnivel4.js";
 
 const nivel4Controller = {
   dialogos: [
-    { personaje: "Profesora Caro", texto: "Bienvendio, aventurero digital." },
+    { personaje: "Profesora Caro", texto: "Bienvenido, aventurero digital." },
     { personaje: "Profesora Caro", texto: "Soy Catherin Dayani Caro, Directora de Ingeniería Ambiental e Ingeniería Sanitaria." },
     { personaje: "Profesora Caro", texto: "En estas carreras trabajamos por el bienestar del planeta y de las personas; diseñamos, analizamos y gestionamos soluciones para el agua, los residuos, la calidad del aire y los ecosistemas. Desde el campo hasta la ciudad, impulsamos proyectos que previenen y resuelven problemáticas ambientales, mejoran la salud pública y promueven un desarrollo sostenible en armonía con la sociedad y la naturaleza."},
     { personaje: "Profesora Caro", texto: "¡Son carreras muy útiles para todos!"}
