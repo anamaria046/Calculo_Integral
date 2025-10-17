@@ -33,7 +33,7 @@ export const preguntasNivel1 = [
     pregunta: "Aquí va la pregunta: ¿cómo se le llama a una mejora paso a paso, es decir, que es constante?", 
     respuesta: "kaizen",
     dialogoCorrecto:  "¡Correcto! El Kaizen es una filosofía japonesa que se centra en la mejora continua, algo fundamental en ingeniería industrial.",
-    dialogoIncorrecto: "Lo siento, esa no es la respuesta, amigo. Piensa en una palabra japonesa, que escrita de manera romanizada (es decir, en nuestro lenguaje) tiene 5 letras, y que se suele decir bastante en este gremio, en forma de filosofía. Vamos, ¡intenta de nuevo!"
+    dialogoIncorrecto: "Lo siento, esa no es la respuesta, amigo. Piensa en una palabra japonesa, que escrita de manera romanizada (es decir, en nuestro lenguaje) tiene 6 letras, y que se suele decir bastante en este gremio, en forma de filosofía. Vamos, ¡intenta de nuevo!"
   },
   { // Pregunta 7
     pregunta: "Aquí va la pregunta: ¿cuál es el ritmo marcado por la demanda?", 
