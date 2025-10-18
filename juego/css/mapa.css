@@ -22,8 +22,9 @@ body{
 p {
   font-family: "Silkscreen", sans-serif;
   text-align: center;
-  font-size: 17px;
-  color: #5C0F0F;
+  font-size: 45px;
+  background-color: azure;
+  color: #fa0101;
 }
 
 .btn-container {
