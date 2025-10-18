@@ -8,24 +8,22 @@
 </head>
 <body data-pagina="nivel2">
     <audio id="audio" src="assets/sounds/n2.m4a" autoplay></audio>
-  <!-- Fondo -->
+
   <video autoplay loop muted playsinline id="video-fondo">
     <source src="assets/video/fondo2.mp4" type="video/mp4" />
   </video>
 
-  <!-- Profesor -->
+  
   <div class="profesor">
     <img src="assets/img/ochoa.png" alt="profesor" />
   </div>
 
-  <!-- Diálogo inicial -->
   <div class="caja-dialogo" id="dialogoInicial">
     <div class="nombre-personaje" id="nombrePersonaje">Profesor Ochoa</div>
     <p id="textoDialogo"></p>
     <button id="btnSiguiente">Siguiente</button>
   </div>
 
-  <!-- Adivinanza -->
   <div class="dialogo-box" id="adivinanzaBox" style="display:none;">
     <div class="nombre-personaje">Profesor Ochoa</div>
     <p id="textoAdivinanza"></p>
@@ -34,7 +32,6 @@
     <p id="mensajeResultado"></p>
   </div>
 
-  <!-- Diálogo final -->
   <div class="dialogo-box" id="dialogoFinal" style="display:none;">
     <div class="nombre-personaje">Profesor Ochoa</div>
     <p>
@@ -44,11 +41,9 @@
     <button id="btnSiguienteNivel">Ir al siguiente nivel</button>
   </div>
 
-  <!-- Script principal del nivel -->
   <script type="module">
     import nivel2Controller from "./js/controller/nivel2controller.js";
     nivel2Controller.init();
   </script>
-
 </body>
 </html>

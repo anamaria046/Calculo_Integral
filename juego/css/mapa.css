@@ -9,7 +9,6 @@ html, body{
   overflow-x: hidden;
   height: 100%;
 }
-
 body{
   background-image: url("../assets/img/mapa.png");
   background-repeat: no-repeat;
@@ -18,7 +17,6 @@ body{
   background-size: 100% auto; 
   min-height: 328.33vw;
 }
-
 p {
   font-family: "Silkscreen", sans-serif;
   text-align: center;
@@ -26,7 +24,6 @@ p {
   background-color: azure;
   color: #fa0101;
 }
-
 .btn-container {
   position: relative;
   top: 0;
@@ -35,7 +32,6 @@ p {
   height: 100vh; 
   z-index: 10;
 }
-
 .edificio {
   position: absolute; 
   background: none;
@@ -43,52 +39,42 @@ p {
   cursor: pointer;
   padding: 0;
 }
-
 .edificio img {
   width: 520px;
   height: auto;
   image-rendering: pixelated;
   transition: 0.25s;
 }
-
 .edificio.desbloqueado:hover img {
   filter: drop-shadow(0 0 4px #DAF527)
           drop-shadow(0 0 8px #DAF527)
           drop-shadow(0 0 12px #DAF527);
   transform: scale(1.05);
 }
-
 .edificio.bloqueado img {
   opacity: 0.5;
   filter: grayscale(100%) brightness(0.7);
   cursor: not-allowed;
 }
-
 .edificio.desbloqueado img {
-  opacity: 1;
-  filter: none;
+  transition: filter 0.4s ease, transform 0.4s ease, opacity 0.4s ease;
 }
-
 .e12 {
   top: 465px;
   left: 30px;
 }
-
 .e2 {
   top: 1249px;
   right: 30px;
 }
-
 .lb {
   top: 1965px;
   left: 30px;
 }
-
 .em2 {
   top: 2655px;
   right: 30px;
 }
-
 .ec {
   top: 3880px;
   right: 30px;

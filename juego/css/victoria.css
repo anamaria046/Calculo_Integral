@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url("../assets/img/final.png") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  color: #fff;
+}
+
+.contenedor-victoria h1 {
+  font-size: 24px;
+  text-shadow: 0 0 8px #ffd700;
+  margin-bottom: 30px;
+}
+
+.escena {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.personaje {
+  width: 250px;
+  animation: saltar 2s infinite;
+}
+
+.trofeo {
+  width: 120px;
+  margin-left: 20px;
+  animation: brillar 1.5s infinite alternate;
+}
+
+#btnReiniciar {
+  margin-top: 40px;
+  padding: 15px 25px;
+  font-size: 14px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffd700;
+  color: #000;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  font-family:  'Press Start 2P', cursive;
+}
+
+#btnReiniciar:hover {
+  transform: scale(1.1);
+  background-color: #fff176;
+}
+
+@keyframes saltar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes brillar {
+  0% { filter: drop-shadow(0 0 5px #fff); }
+  100% { filter: drop-shadow(0 0 15px #ffd700); }
+}

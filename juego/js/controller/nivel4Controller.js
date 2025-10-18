@@ -15,7 +15,6 @@ const nivel4Controller = {
   init() {
     console.log("Controlador de Nivel 4 iniciado");
 
-    // 🔹 Coinciden con el HTML actual
     this.cajaDialogo = document.getElementById("dialogoInicial");
     this.nombrePersonaje = document.getElementById("nombrePersonaje");
     this.textoDialogo = document.getElementById("textoDialogo");
@@ -30,18 +29,15 @@ const nivel4Controller = {
     this.dialogoFinal = document.getElementById("dialogoFinal");
     this.btnSiguienteNivel = document.getElementById("btnSiguienteNivel");
 
-    // Verifica que la caja principal exista
     if (!this.cajaDialogo) {
       console.error("No se encontró el div con id='dialogoInicial'");
       return;
     }
 
-    // Eventos
     this.btnSiguiente.addEventListener("click", () => this.mostrarSiguienteDialogo());
     this.btnResponder.addEventListener("click", () => this.verificarRespuesta());
     this.btnSiguienteNivel.addEventListener("click", () => this.irASiguienteNivel());
 
-    // Primer diálogo
     this.mostrarSiguienteDialogo();
   },
 
@@ -74,6 +70,7 @@ const nivel4Controller = {
       this.mensajeResultado.textContent = this.preguntaActual.dialogoCorrecto;
       this.mensajeResultado.style.color = "lightgreen";
       Progreso.establecerNivelDesbloqueado(5);
+
       setTimeout(() => {
         this.cajaAdivinanza.style.display = "none";
         this.mostrarDialogoFinal();
@@ -82,6 +79,10 @@ const nivel4Controller = {
       this.mensajeResultado.textContent = this.preguntaActual.dialogoIncorrecto;
       this.mensajeResultado.style.color = "red";
       this.respuestaJugador.value = "";
+
+      setTimeout(() => {
+        this.mostrarAdivinanza();
+      }, 2000);
     }
   },
 

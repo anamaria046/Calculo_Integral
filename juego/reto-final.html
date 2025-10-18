@@ -4,28 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reto Final - Señal de Boyacá</title>
-  <link rel="stylesheet" href="css/reto-final.css" />
+  <link rel="stylesheet" href="css/retofinal.css" />
 </head>
 <body data-pagina="reto-final">
     <audio id="audio" src="assets/sounds/nf.m4a" autoplay></audio>
-  <!-- Fondo -->
+
   <video autoplay loop muted playsinline id="video-fondo">
     <source src="assets/video/fondo5.mp4" type="video/mp4" />
   </video>
 
-  <!-- Profesor -->
   <div class="profesor">
     <img src="assets/img/gabriel.png" alt="profesor" />
   </div>
 
-  <!-- Diálogo inicial -->
   <div class="caja-dialogo" id="dialogoInicial">
     <div class="nombre-personaje" id="nombrePersonaje">Profesor Cifuentes</div>
     <p id="textoDialogo"></p>
     <button id="btnSiguiente">Siguiente</button>
   </div>
 
-  <!-- Adivinanza -->
   <div class="dialogo-box" id="adivinanzaBox" style="display:none;">
     <div class="nombre-personaje">Profesor Cifuentes</div>
     <p id="textoAdivinanza"></p>
@@ -34,7 +31,6 @@
     <p id="mensajeResultado"></p>
   </div>
 
-  <!-- Diálogo final -->
   <div class="dialogo-box" id="dialogoFinal" style="display:none;">
     <div class="nombre-personaje">Profesor Cifuentes</div>
     <p>
@@ -45,7 +41,6 @@
     <button id="btnSiguienteNivel">Finalizar</button>
   </div>
 
-  <!-- Script principal del nivel -->
   <script type="module">
     import retofinalController from "./js/controller/reto-finalController.js";
     retofinalController.init();
