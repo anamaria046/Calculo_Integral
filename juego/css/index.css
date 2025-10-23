@@ -2,7 +2,7 @@
 body{
     background-image: url("../assets/img/fondo2.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     background-color: rgba(0,0,0,0.3);
     background-blend-mode: darken;
     display: flex;

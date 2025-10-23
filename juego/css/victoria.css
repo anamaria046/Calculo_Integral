@@ -20,6 +20,12 @@ body {
   margin-bottom: 30px;
 }
 
+.contenedor-victoria h2 {
+  font-size: 18px;
+  text-shadow: 0 0 8px #ffd700;
+  margin-bottom: 30px;
+}
+
 .escena {
   position: relative;
   display: flex;
@@ -33,7 +39,7 @@ body {
 }
 
 .trofeo {
-  width: 120px;
+  width: 400px;
   margin-left: 20px;
   animation: brillar 1.5s infinite alternate;
 }

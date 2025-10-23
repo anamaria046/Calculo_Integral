@@ -77,7 +77,7 @@ const retofinalController = {
       setTimeout(() => {
         this.cajaAdivinanza.style.display = "none";
         this.mostrarDialogoFinal();
-      }, 2000);
+      }, 5000);
     } else {
 
       this.mensajeResultado.textContent = this.preguntaActual.dialogoIncorrecto;
@@ -86,7 +86,7 @@ const retofinalController = {
 
       setTimeout(() => {
         this.mostrarAdivinanza();
-      }, 2000);
+      }, 5000);
     }
   },
 

@@ -82,14 +82,14 @@ const nivel1Controller = {
       setTimeout(() => {
         this.cajaAdivinanza.style.display = "none";
         this.mostrarDialogoFinal();
-      }, 2000);
+      }, 5000);
     } else {
       this.mensajeResultado.textContent = this.preguntaActual.dialogoIncorrecto;
       this.mensajeResultado.style.color = "red";
 
       setTimeout(() => {
         this.mostrarAdivinanza();
-      }, 2000);
+      }, 5000);
     }
   },
 
