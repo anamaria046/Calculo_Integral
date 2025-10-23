@@ -77,7 +77,7 @@ const retofinalController = {
       setTimeout(() => {
         this.cajaAdivinanza.style.display = "none";
         this.mostrarDialogoFinal();
-      }, 5000);
+      }, 2000);
     } else {
 
       this.mensajeResultado.textContent = this.preguntaActual.dialogoIncorrecto;
