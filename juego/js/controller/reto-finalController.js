@@ -86,7 +86,7 @@ const retofinalController = {
 
       setTimeout(() => {
         this.mostrarAdivinanza();
-      }, 5000);
+      }, 2000);
     }
   },
 

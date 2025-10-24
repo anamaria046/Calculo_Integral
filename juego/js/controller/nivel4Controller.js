@@ -82,7 +82,7 @@ const nivel4Controller = {
 
       setTimeout(() => {
         this.mostrarAdivinanza();
-      }, 5000);
+      }, 2000);
     }
   },
 
