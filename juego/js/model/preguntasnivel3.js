@@ -24,7 +24,7 @@ export const preguntasNivel3 = [
     dialogoIncorrecto: "Lo siento, esa no es la respuesta, amigo. Piensa en un motor que se usa mucho en robótica, y que su nombre es una abreviación; además, la palabra es parecida al nombre de un animal que se encuentra en varios bosques, y en películas. Vamos, ¡intenta de nuevo!"
   },
   { 
-    pregunta: "Aquí va la pregunta: ¿cómo se llaman las placas de prototipado rápid?", 
+    pregunta: "Aquí va la pregunta: ¿cómo se llaman las placas de prototipado rápido?", 
     respuesta: "arduino",
     dialogoCorrecto:  "¡Correcto! Arduino es una plataforma de prototipado electrónico de código abierto muy popular entre los entusiastas de la mecatrónica.",
     dialogoIncorrecto: "No es la respuesta, amigo. La respuesta también es toda una plataforma y conjunto de elementos, usada por muchos jóvenes que desean incursionar en la mecatrónica. Vamos, ¡intenta de nuevo!"
